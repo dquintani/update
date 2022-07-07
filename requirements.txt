@@ -1,0 +1,9 @@
+python-dotenv
+jupyter
+nbconvert
+pandas
+matplotlib
+seaborn
+scipy
+tweepy
+ipython
