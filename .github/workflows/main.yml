@@ -1,8 +1,7 @@
-name: Update on push
+name: Scheduled Update
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: '0 8,16,23 * * *'
 jobs:
   update:
     name: update data
