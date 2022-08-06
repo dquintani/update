@@ -24,6 +24,7 @@ jobs:
           pip install -r requirements.txt
       - name: import github secrets and run notebooks
         env: 
+        
           GHD_TWITTER_ACCESSTOKEN: ${{ secrets.GHD_TWITTER_ACCESSTOKEN }}
           GHD_TWITTER_ACCESSTOKENSECRET: ${{ secrets.GHD_TWITTER_ACCESSTOKENSECRET }}
           GHD_TWITTER_APIKEY: ${{ secrets.GHD_TWITTER_APIKEY }}
@@ -31,6 +32,13 @@ jobs:
           GHD_TWITTER_BEARERTOKEN: ${{ secrets.GHD_TWITTER_BEARERTOKEN }}
           GHD_TWITTER_CLIENTID: ${{ secrets.GHD_TWITTER_CLIENTID }}
           GHD_TWITTER_CLIENTSECRET: ${{ secrets.GHD_TWITTER_CLIENTSECRET }}
+          
+          BG1_TWITTER_APIKEY: ${{ secrets.BG1_TWITTER_APIKEY }}
+          BG1_TWITTER_APIKEYSECRET: ${{ secrets.BG1_TWITTER_APIKEYSECRET }}
+          BG1_TWITTER_BEARERTOKEN: ${{ secrets.BG1_TWITTER_BEARERTOKEN }}
+          BG1_TWITTER_ACCESSTOKEN: ${{ secrets.BG1_TWITTER_ACCESSTOKEN }}
+          BG1_TWITTER_ACCESSTOKENSECRET: ${{ secrets.BG1_TWITTER_ACCESSTOKENSECRET }}   
+          
         id: run_notebooks
         run: |
           jupyter nbconvert --to notebook --inplace --ExecutePreprocessor.kernel_name=python3 --execute MotherScript.ipynb
