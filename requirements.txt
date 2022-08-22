@@ -8,3 +8,5 @@ scipy
 tweepy
 ipython
 python-twitter==3.5
+wbgapi
+translators
