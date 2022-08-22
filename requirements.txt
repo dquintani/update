@@ -10,3 +10,4 @@ ipython
 python-twitter==3.5
 wbgapi
 translators
+openpyxl
